@@ -1,0 +1,808 @@
+<div class="page page-shop" data-name="shop">
+    <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="button button-fill color-white button-44 panel-open" data-panel="left">
+                    <i class="bi bi-list"></i>
+                </a>
+            </div>
+            <div class="title">
+                <div class="logo-small">
+                    <img src="img/logo.png" alt="" />
+                    <h5><span class="text-secondary fw-light">Finance</span><br />Wallet</h5>
+                </div>
+            </div>
+            <div class="right">
+                <a href="/profile/" class="button button-fill color-white button-44">
+                    <i class="bi bi-person-circle"></i>
+                    <span class="count-indicator"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter nested panel -->
+    <div class="panel panel-right panel-cover panel-init elevation-3" id="panel-right-filter"
+        data-container-el="#panel-page" data-backdrop="false">
+        <div class="page">
+            <div class="page-content">
+                <div class="row margin-bottom">
+                    <div class="col">
+                        <h6 class="no-margin-bottom">Filter Criteria</h6>
+                        <p class="small text-muted">2154 products</p>
+                    </div>
+                    <div class="col-auto align-self-center">
+                        <button class="button panel-close no-padding">
+                            <i class="bi bi-x size-18"></i>
+                        </button>
+                    </div>
+                </div>
+                <br />
+                <div class="margin-bottom">
+                    <h6>Select Range</h6>
+                    <div id="rangeslider" class="margin-top"></div>
+                </div>
+
+                <div class="row margin-bottom">
+                    <div class="col">
+                        <label for="input-number" class="small text-muted">Minimum</label>
+                        <input type="number" min="0" max="500" value="100" step="1" id="input-select" />
+                    </div>
+                    <div class="col-auto align-self-center">
+                        <label class="small"></label>
+                        to
+                    </div>
+                    <div class="col">
+                        <label for="input-number" class="small text-muted">Maximum</label>
+                        <input type="number" class="form-control" min="0" max="500" value="200" step="1"
+                            id="input-number" />
+                    </div>
+                </div>
+
+                <div class="margin-bottom">
+                    <label for="filtertype" class="small text-muted">Select Shopping Type</label>
+                    <div class="list no-margin-top margin-bottom">
+                        <ul class="no-background">
+                            <li>
+                                <label class="item-checkbox item-content">
+                                    <input type="checkbox" name="demo-checkbox" value="Books" checked="men" />
+                                    <i class="icon icon-checkbox"></i>
+                                    <div class="item-inner">
+                                        <div class="item-title">Men</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="item-checkbox item-content">
+                                    <input type="checkbox" name="demo-checkbox" value="women" />
+                                    <i class="icon icon-checkbox"></i>
+                                    <div class="item-inner">
+                                        <div class="item-title">Women</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="item-checkbox item-content">
+                                    <input type="checkbox" name="demo-checkbox" value="kids" />
+                                    <i class="icon icon-checkbox"></i>
+                                    <div class="item-inner">
+                                        <div class="item-title">Kids</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="item-checkbox item-content">
+                                    <input type="checkbox" name="demo-checkbox" value="home" />
+                                    <i class="icon icon-checkbox"></i>
+                                    <div class="item-inner">
+                                        <div class="item-title">Home</div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="margin-bottom">
+                    <label for="input-select" class="small text-muted">Keyword</label>
+                    <input type="text" class="form-control" placeholder="Keyword" />
+                </div>
+
+                <div class="margin-bottom">
+                    <label for="discount" class="small text-muted">Offer Discount</label>
+                    <select class="form-control" id="discount">
+                        <option>10% </option>
+                        <option>30%</option>
+                        <option>50%</option>
+                        <option>80%</option>
+                    </select>
+                </div>
+
+                <div class="row margin-bottom">
+                    <div class="col-100">
+                        <button class="button button-fill button-raised button-large panel-close">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- filter panel right -->
+
+    <!-- main page content -->
+    <div class="page-content has-footer">
+        <!-- search -->
+        <div class="row margin-bottom">
+            <div class="col-100 overflow-hidden">
+                <!-- input -->
+                <div class="row">
+                    <div class="col position-relative align-self-center">
+                        <div class="list form-list no-margin margin-bottom">
+                            <ul>
+                                <li class="item-content item-input item-input-with-value is-valid">
+                                    <div class="item-inner">
+                                        <div class="item-title item-floating-label">Search</div>
+                                        <div class="item-input-wrap">
+                                            <input type="text" name="search" class="input-with-value"
+                                                value="Best Template" autofocus />
+                                            <span class="input-clear-button"></span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto align-self-center">
+                        <button class="button button-fill color-white button-44 filter-btn panel-open"
+                            data-panel="#panel-right-filter">
+                            <i class="bi bi-filter size-22"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--categories -->
+        <div class="row margin-bottom">
+            <div class="col-100 no-padding-horizontal">
+                <!-- swiper categories -->
+                <div class="swiper-container connectionwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide text-align-center">
+                            <a href="products/" class="card text-align-center margin-bottom-half">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-80 rounded-18">
+                                        <img src="img/categories1.png" alt=""/>
+                                    </figure>
+                                </div>
+                            </a>
+                            <p class="size-10 text-secondary">Electronics</p>
+                        </div>
+
+                        <div class="swiper-slide text-align-center">
+                            <a href="products/" class="card text-align-center margin-bottom-half">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-80 rounded-20">
+                                        <img src="img/categories2.png" alt=""/>
+                                    </figure>
+                                </div>
+                            </a>
+                            <p class="size-10 text-secondary">Clothing</p>
+                        </div>
+
+                        <div class="swiper-slide text-align-center">
+                            <a href="products/" class="card text-align-center margin-bottom-half">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-80 rounded-20">
+                                        <img src="img/categories3.png" alt=""/>
+                                    </figure>
+                                </div>
+                            </a>
+                            <p class="size-10 text-secondary">Appliences</p>
+                        </div>
+
+                        <div class="swiper-slide text-align-center">
+                            <a href="products/" class="card text-align-center margin-bottom-half">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-80 rounded-20">
+                                        <img src="img/categories4.png" alt=""/>
+                                    </figure>
+                                </div>
+                            </a>
+                            <p class="size-10 text-secondary">Mobiles</p>
+                        </div>
+                        <div class="swiper-slide text-align-center">
+                            <a href="products/" class="card text-align-center margin-bottom-half">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-80 rounded-20">
+                                        <img src="img/categories5.png" alt=""/>
+                                    </figure>
+                                </div>
+                            </a>
+                            <p class="size-10 text-secondary">iPhone</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--high light -->
+        <div class="row margin-bottom">
+            <div class="col-100">
+                <div class="card theme-bg">
+                    <img src="img/apple-watch.png" alt="" class="iwatchposition" />
+                    <div class="card-content card-content-padding padding-vertical">
+                        <div class="row">
+                            <div class="col-auto align-self-center">
+                                <h4><span class="fw-light">15% OFF</span><br />iWatch</h4>
+                            </div>
+                            <div class="col-auto align-self-center margin-left-auto text-align-right">
+                                <img src="img/visa.png" alt="" />
+                                <p class="size-10"><span class="text-muted">Buy at 1450.00</span><br />Using Credit
+                                    Card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--products -->
+        <div class="row margin-bottom">
+            <div class="col-100 no-padding-horizontal">
+                <!-- swiper categories -->
+                <div class="swiper-container connectionwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide text-align-center">
+                            <a href="product/" class="card text-align-center bg-theme">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-90 rounded-15 ">
+                                        <img src="img/categories3.jpg" alt=""/>
+                                    </figure>
+                                    <p class="text-align-center size-12"><small class="text-muted">LAVAA
+                                            3500</small><br />$ 459.00</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide text-align-center">
+                            <a href="product/" class="card text-align-center bg-theme">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-90 rounded-15 ">
+                                        <img src="img/categories4.png" alt=""/>
+                                    </figure>
+                                    <p class="text-align-center size-12"><small class="text-muted">Galaxy
+                                            S20</small><br />$ 459.00</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide text-align-center">
+                            <a href="product/" class="card text-align-center bg-theme">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-90 rounded-15 ">
+                                        <img src="img/categories5.png" alt=""/>
+                                    </figure>
+                                    <p class="text-align-center size-12"><small class="text-muted">iPhone
+                                            12SR</small><br />$ 1012.00</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide text-align-center">
+                            <a href="product/" class="card text-align-center bg-theme">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-90 rounded-15 ">
+                                        <img src="img/categories3.jpg" alt=""/>
+                                    </figure>
+                                    <p class="text-align-center size-12"><small class="text-muted">LAVAA
+                                            3500</small><br />$ 459.00</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide text-align-center">
+                            <a href="product/" class="card text-align-center bg-theme">
+                                <div class="card-content card-content-padding padding-half-sm">
+                                    <figure class="avatar avatar-90 rounded-15 ">
+                                        <img src="img/categories4.png" alt=""/>
+                                    </figure>
+                                    <p class="text-align-center size-12"><small class="text-muted">Galaxy
+                                            S20</small><br />$ 459.00</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- product medsize box  -->
+        <div class="row margin-bottom-half">
+            <div class="col-50 medium-33 large-25">
+                <div class="card margin-bottom">
+                    <div class="card-content card-content-padding padding-half-sm position-relative">
+                        <div class="position-absolute left-0 no-padding margin-half z-index-1">
+                            <div class="chip bg-theme">
+                                26% OFF
+                            </div>
+                        </div>
+                        <div class="position-absolute right-0 no-padding padding-half z-index-1 ">
+                            <button
+                                class="button button-small button-28 roudned-circle elevation-2 elevation-red text-color-white bg-color-red">
+                                <i class="bi bi-heart size-10 vm"></i>
+                            </button>
+                        </div>
+                        <figure class="avatar w-100 rounded-15 border">
+                            <img src="img/categories4.png" alt="" class="w-100">
+                        </figure>
+                    </div>
+                    <div class="card-content card-content-padding padding-top-half">
+                        <div class="row">
+                            <div class="col">
+                                <p class="small"><small class="text-muted size-12">LAVA B500</small><br />$ 265.00
+                                </p>
+                            </div>
+                            <div class="col-auto no-padding-left">
+                                <button class="button button-small button-link color-theme text-color-theme">
+                                    <i class="bi bi-bag-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-50 medium-33 large-25">
+                <div class="card margin-bottom">
+                    <div class="card-content card-content-padding padding-half-sm position-relative">
+                        <div class="position-absolute left-0 no-padding margin-half z-index-1">
+                            <div class="chip bg-theme">
+                                30% OFF
+                            </div>
+                        </div>
+                        <div class="position-absolute right-0 no-padding padding-half z-index-1 ">
+                            <button
+                                class="button button-small button-28 roudned-circle elevation-2 elevation-red text-color-red">
+                                <i class="bi bi-heart size-10 vm"></i>
+                            </button>
+                        </div>
+                        <figure class="avatar w-100 rounded-15 border">
+                            <img src="img/categories1.png" alt="" class="w-100">
+                        </figure>
+                    </div>
+                    <div class="card-content card-content-padding padding-top-half">
+                        <div class="row">
+                            <div class="col no-padding-right">
+                                <p class="small"><small class="text-muted size-12">Smasung S500</small><br />$
+                                    459.00</p>
+                            </div>
+                            <div class="col-auto no-padding-left">
+                                <button class="button button-small button-link color-theme text-color-theme">
+                                    <i class="bi bi-bag-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-50 medium-33 large-25">
+                <div class="card margin-bottom">
+                    <div class="card-content card-content-padding padding-half-sm position-relative">
+                        <div class="position-absolute left-0 no-padding margin-half z-index-1">
+                            <div class="chip bg-color-red text-color-white">
+                                SALE
+                            </div>
+                        </div>
+                        <div class="position-absolute right-0 no-padding padding-half z-index-1 ">
+                            <button
+                                class="button button-small button-28 roudned-circle elevation-2 elevation-red text-color-white bg-color-red">
+                                <i class="bi bi-heart size-10 vm"></i>
+                            </button>
+                        </div>
+                        <figure class="avatar w-100 rounded-15 border">
+                            <img src="img/categories2.png" alt="" class="w-100">
+                        </figure>
+                    </div>
+                    <div class="card-content card-content-padding padding-top-half">
+                        <div class="row">
+                            <div class="col">
+                                <p class="small"><small class="text-muted size-12">Clothing</small><br />$ 265.00
+                                </p>
+                            </div>
+                            <div class="col-auto no-padding-left">
+                                <button class="button button-small button-link color-theme text-color-theme">
+                                    <i class="bi bi-bag-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-50 medium-33 large-25">
+                <div class="card margin-bottom">
+                    <div class="card-content card-content-padding padding-half-sm position-relative">
+                        <div class="position-absolute left-0 no-padding margin-half z-index-1">
+                            <div class="chip bg-color-yellow text-color-white">
+                                1 Offer
+                            </div>
+                        </div>
+                        <div class="position-absolute right-0 no-padding padding-half z-index-1 ">
+                            <button
+                                class="button button-small button-28 roudned-circle elevation-2 elevation-red text-color-red">
+                                <i class="bi bi-heart size-10 vm"></i>
+                            </button>
+                        </div>
+                        <figure class="avatar w-100 rounded-15 border">
+                            <img src="img/categories3.png" alt="" class="w-100">
+                        </figure>
+                    </div>
+                    <div class="card-content card-content-padding padding-top-half">
+                        <div class="row">
+                            <div class="col">
+                                <p class="small"><small class="text-muted size-12">Wash.Machine</small><br />$
+                                    254.00</p>
+                            </div>
+                            <div class="col-auto no-padding-left">
+                                <button class="button button-small button-link color-theme text-color-theme">
+                                    <i class="bi bi-bag-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- offer banner-->
+        <div class="row margin-bottom">
+            <div class="col-100">
+                <div class="card theme-bg overflow-hidden">
+                    <figure
+                        class="no-margin no-padding position-absolute no-padding left-0 w-100 h-100 coverimg right-center-img">
+                        <img src="img/offerbg.png" alt=""/>
+                    </figure>
+                    <div class="card-content card-content-padding padding-vertical">
+                        <div class="row">
+                            <div class="col-80 align-self-center">
+                                <h1 class="margin-bottom"><span class="fw-light">15% OFF</span><br/>GiftCard</h1>
+                                <p>Thank you for spending with us, You have received Gift Card.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- product medsize box no gap -->
+        <div class="row margin-bottom ">
+            <div class="col-100">
+                <div class="card">
+                    <div class="card-content card-content-padding no-padding">
+                        <div class="row no-margin-horizontal">
+                            <div class="col-50 medium-33 large-25 border-right padding-vertical">
+                                <div class="position-relative">
+                                    <div class="position-absolute left-0 no-padding z-index-1">
+                                        <div class="chip bg-theme">
+                                            26% OFF
+                                        </div>
+                                    </div>
+                                    <div class="position-absolute right-0 no-padding z-index-1 ">
+                                        <button
+                                            class="button button-small button-28 roudned-circle elevation-2 elevation-red text-color-red">
+                                            <i class="bi bi-heart size-10 vm"></i>
+                                        </button>
+                                    </div>
+                                    <figure class="avatar w-100 rounded-15">
+                                        <img src="img/categories4.png" alt="" class="w-100">
+                                    </figure>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="small"><small class="text-muted size-12">LAVA
+                                                    B500</small><br />$
+                                                265.00</p>
+                                        </div>
+                                        <div class="col-auto align-self-center">
+                                            <button
+                                                class="button button-small button-link color-theme text-color-theme">
+                                                <i class="bi bi-bag-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-50 medium-33 large-25 padding-vertical">
+                                <div class="position-relative">
+                                    <div class="position-absolute left-0 no-padding  z-index-1">
+                                        <div class="chip bg-theme">
+                                            30% OFF
+                                        </div>
+                                    </div>
+                                    <div class="position-absolute right-0 no-padding  z-index-1 ">
+                                        <button
+                                            class="button button-small button-28 roudned-circle elevation-2 elevation-red text-color-red">
+                                            <i class="bi bi-heart size-10 vm"></i>
+                                        </button>
+                                    </div>
+                                    <figure class="avatar w-100 rounded-15">
+                                        <img src="img/categories1.png" alt="" class="w-100">
+                                    </figure>
+                                </div>
+                                <div class="row">
+                                    <div class="col ">
+                                        <p class="small"><small class="text-muted size-12">Smasung
+                                                S500</small><br />$ 459.00</p>
+                                    </div>
+                                    <div class="col-auto align-self-center no-padding-left">
+                                        <button class="button button-small button-link color-theme text-color-theme">
+                                            <i class="bi bi-bag-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-margin-horizontal border-top">
+                            <div class="col-50 medium-33 large-25 border-right padding-vertical">
+                                <div class="position-relative">
+                                    <div class="position-absolute left-0 no-padding z-index-1">
+                                        <div class="chip bg-color-red text-color-white">
+                                            SALE
+                                        </div>
+                                    </div>
+                                    <div class="position-absolute right-0 no-padding z-index-1 ">
+                                        <button
+                                            class="button button-small button-28 roudned-circle elevation-2 elevation-red text-color-white bg-color-red">
+                                            <i class="bi bi-heart size-10 vm"></i>
+                                        </button>
+                                    </div>
+                                    <figure class="avatar w-100 rounded-15">
+                                        <img src="img/categories2.png" alt="" class="w-100">
+                                    </figure>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="small"><small class="text-muted size-12">Clothing</small><br />$
+                                            65.00</p>
+                                    </div>
+                                    <div class="col-auto align-self-center">
+                                        <button class="button button-small button-link color-theme text-color-theme">
+                                            <i class="bi bi-bag-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-50 medium-33 large-25 padding-vertical">
+                                <div class="position-relative">
+                                    <div class="position-absolute left-0 no-padding z-index-1">
+                                        <div class="chip bg-color-yellow text-color-white">
+                                            1 Offer
+                                        </div>
+                                    </div>
+                                    <div class="position-absolute right-0 no-padding z-index-1 ">
+                                        <button
+                                            class="button button-small button-28 roudned-circle elevation-2 elevation-red text-color-red">
+                                            <i class="bi bi-heart size-10 vm"></i>
+                                        </button>
+                                    </div>
+                                    <figure class="avatar w-100 rounded-15">
+                                        <img src="img/categories3.png" alt="" class="w-100">
+                                    </figure>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="small"><small class="text-muted size-12">Wash.Machine</small><br />$
+                                            254.00</p>
+                                    </div>
+                                    <div class="col-auto align-self-center">
+                                        <button class="button button-small button-link color-theme text-color-theme">
+                                            <i class="bi bi-bag-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- popular shopping  -->
+        <div class="row margin-bottom gano-padding">
+            <div class="col">
+                <h6 class="title">Popular</h6>
+            </div>
+        </div>
+        <div class="row margin-bottom">
+            <div class="col-100">
+                <div class="card">
+                    <div class="card-content card-content-padding">
+                        <div class="list list-group-flush">
+                            <ul>
+                                <li class="list-item">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-44 elevation-2 border card rounded-15">
+                                                <img src="img/categories2.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col align-self-center no-padding-left">
+                                            <p class="text-secondary size-10 no-margin-bottom">Clothing</p>
+                                            <p>ZIVACA SK10</p>
+                                        </div>
+                                        <div class="col-auto align-self-center text-align-right">
+                                            <p class="text-secondary text-muted size-10 no-margin-bottom">On Sale</p>
+                                            <p>80.00</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-44 elevation-2 border card rounded-15">
+                                                <img src="img/categories4.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col align-self-center no-padding-left">
+                                            <p class="text-secondary size-10 no-margin-bottom">Mobiles</p>
+                                            <p>LAVAA 3005</p>
+                                        </div>
+                                        <div class="col-auto align-self-center text-align-right">
+                                            <p class="text-secondary text-muted size-10 no-margin-bottom">Best Exchange
+                                            </p>
+                                            <p>250.00</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-item">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-44 elevation-2 border card rounded-15">
+                                                <img src="img/categories1.png" alt="" />
+                                            </div>
+                                        </div>
+                                        <div class="col align-self-center no-padding-left">
+                                            <p class="text-muted size-10 no-margin-bottom">Electronics</p>
+                                            <p>Samsung CT30</p>
+                                        </div>
+                                        <div class="col-auto align-self-center text-align-right">
+                                            <p class="text-secondary text-muted size-10 no-margin-bottom">20% OFF</p>
+                                            <p>355.00</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home/">
+                        <span>
+                            <i class="nav-icon bi bi-house"></i>
+                            <span class="nav-text">Home</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/stats/">
+                        <span>
+                            <i class="nav-icon bi bi-binoculars"></i>
+                            <span class="nav-text">Statistics</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item centerbutton">
+                    <button type="button" class="nav-link popup-open" data-popup=".popup-menu">
+                        <span class="theme-radial-gradient">
+                            <i class="bi bi-grid size-22"></i>
+                        </span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/shop/">
+                        <span>
+                            <i class="nav-icon bi bi-bag"></i>
+                            <span class="nav-text">Shop</span>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/wallet/">
+                        <span>
+                            <i class="nav-icon bi bi-wallet2"></i>
+                            <span class="nav-text">Wallet</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="popup popup-menu elevation-2 popup-swipe-to-close">
+        <div class="row h-100 justify-content-center align-item-center">
+            <div class="col-100 align-self-center">
+                <h1 class="margin-bottom"><span class="text-secondary fw-light">Quick</span><br />Actions!</h1>
+                <div class="text-align-center">
+                    <img src="img/QRCode.png" alt="" class="margin-bottom-half" />
+                    <p class="small text-secondary margin-bottom">Ask to scan this QR-Code<br />to accept money</p>
+                </div>
+                <div class="row justify-content-center margin-bottom">
+                    <div class="col-auto text-align-center">
+                        <a href="/bills/"
+                            class="avatar avatar-70 elevation-2 elevation-red rounded-20 bg-opac margin-bottom-half popup-close">
+                            <div class="icons text-color-red">
+                                <i class="bi bi-receipt-cutoff size-24"></i>
+                            </div>
+                        </a>
+                        <p class="size-10 text-secondary">Pay Bill</p>
+                    </div>
+
+                    <div class="col-auto text-align-center">
+                        <a href="/sendmoney/"
+                            class="avatar avatar-70 elevation-2 elevation-purple rounded-20 bg-opac margin-bottom-half popup-close">
+                            <div class="icons text-color-purple">
+                                <i class="bi bi-arrow-up-right size-24"></i>
+                            </div>
+                        </a>
+                        <p class="size-10 text-secondary">Send Money</p>
+                    </div>
+
+                    <div class="col-auto text-align-center">
+                        <a href="/receivemoney/"
+                            class="avatar avatar-70 elevation-2 elevation-green rounded-20 bg-opac margin-bottom-half popup-close">
+                            <div class="icons text-color-green">
+                                <i class="bi bi-arrow-down-left size-24"></i>
+                            </div>
+                        </a>
+                        <p class="size-10 text-secondary">Receive Money</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center margin-bottom-half">
+                    <div class="col-auto text-align-center">
+                        <a href="/withdraw/"
+                            class="avatar avatar-70 elevation-2 elevation-secondary rounded-20 bg-opac margin-bottom-half popup-close">
+                            <div class="icons text-secondary">
+                                <i class="bi bi-bank size-24"></i>
+                            </div>
+                        </a>
+                        <p class="size-10 text-secondary">Withdraw</p>
+                    </div>
+
+                    <div class="col-auto text-align-center">
+                        <a href="/addmoney/"
+                            class="avatar avatar-70 elevation-2 elevation-yellow rounded-20 bg-opac margin-bottom-half popup-close">
+                            <div class="icons text-color-yellow">
+                                <i class="bi bi-wallet2 size-24"></i>
+                            </div>
+                        </a>
+                        <p class="size-10 text-secondary">Add Money</p>
+                    </div>
+
+                    <div class="col-auto text-align-center">
+                        <div
+                            class="avatar avatar-70 elevation-2 elevation-skyblue rounded-20 bg-opac margin-bottom-half popup-close">
+                            <div class="icons text-color-blue">
+                                <i class="bi bi-tv size-24"></i>
+                            </div>
+                        </div>
+                        <p class="size-10 text-secondary">Recharge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer ends-->
+</div>

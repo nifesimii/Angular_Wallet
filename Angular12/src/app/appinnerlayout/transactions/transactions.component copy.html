@@ -1,0 +1,173 @@
+<section class="main-content">
+    <div class="container">
+      <div class="contents">
+        <!-- <div class="transfer-box">
+          <div class="box-header box-header--1">
+            <img
+              src="assets/icons/arrows_final.png"
+              alt="Arrows"
+              class="box-header-img"
+            />
+            <h4 class="box-header-title">Make a Transfer</h4>
+          </div>
+          <div class="box-content" *ngIf="!isSubmitted">
+            <form #transferForm="ngForm">
+              <div class="form-group">
+                <label for="fromAccnt">FROM ACCOUNT</label>
+                <input
+                  type="text"
+                  class="input-box"
+                  name="fromAccnt"
+                  id="fromAccnt"
+                  #fromAccnt="ngModel"
+                  [(ngModel)]="fromStr"
+                  disabled
+                />
+              </div>
+              <div class="form-group">
+                <label for="toAccnt">TO ACCOUNT</label>
+                <input
+                  type="text"
+                  class="input-box"
+                  name="toAccnt"
+                  id="toAccnt"
+                  [(ngModel)]="toAcc"
+                  #toAccnt="ngModel"
+                  required
+                />
+                <div [hidden]="toAccnt.valid || toAccnt.pristine" class="alert">
+                  To Account is required
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="amnt">AMOUNT</label>
+                <input
+                  type="number"
+                  class="input-box"
+                  name="amnt"
+                  id="amnt"
+                  #amnt="ngModel"
+                  placeholder="$ 0.00"
+                  [(ngModel)]="amt"
+                  required
+                />
+                <div [hidden]="amnt.valid || amnt.pristine" class="alert">
+                  Ammount is required
+                </div>
+              </div>
+              <div class="btn-group">
+                <button
+                  class="btn btn-primary"
+                  [disabled]="!transferForm.form.valid"
+                  (click)="isSubmitted = true"
+                >
+                  SUBMIT
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="box-content" *ngIf="isSubmitted">
+            <h4>Preview Transfer</h4>
+            <p>To Account : {{ toAcc }}</p>
+            <p>Amount : {{ amt }}</p>
+            <a
+              class="btn btn-primary"
+              style="margin-top: 3rem; margin-right: 1rem"
+              (click)="onSubmit()"
+              >TRANSFER</a
+            >
+            <a class="btn btn-white" (click)="isSubmitted = false">CANCEL</a>
+          </div>
+        </div> -->
+        <div class="transactions-box">
+          <div class="box-header">
+            <img
+              src="assets/icons/briefcase_final.png"
+              alt="Arrows"
+              class="box-header-img"
+            />
+            <h4 class="box-header-title">Recent Transactions</h4>
+          </div>
+          <div class="box-content">
+            <div class="options-row">
+              <div class="form-group search-text">
+                <input
+                  type="text"
+                  matInput
+                  class="search-input"
+                  [(ngModel)]="filterStr"
+                  placeholder="Search by typing"
+                />
+                <button
+                  mat-button
+                  mat-icon-button
+                  class="clear-filter"
+                  (click)="clearFilterField()"
+                  *ngIf="filterStr"
+                >
+                  <mat-icon>close</mat-icon>
+                </button>
+              </div>
+              <div class="sort-group">
+                <label for="">Sort by</label>
+                <a class="btn btn-white" (click)="sort('date')"
+                  >Date
+                  <span *ngIf="fieldName == 'date'">
+                    <span *ngIf="order == 'asc'">&#9651;</span>
+                    <span *ngIf="order == 'desc'">&#9661;</span>
+                  </span>
+                </a>
+                <a class="btn btn-white" (click)="sort('name')"
+                  >Benificiary
+                  <span *ngIf="fieldName == 'name'">
+                    <span *ngIf="order == 'asc'">&#9651;</span>
+                    <span *ngIf="order == 'desc'">&#9661;</span>
+                  </span>
+                </a>
+                <a class="btn btn-white" (click)="sort('amount')"
+                  >Amount
+                  <span *ngIf="fieldName == 'amount'">
+                    <span *ngIf="order == 'asc'">&#9651;</span>
+                    <span *ngIf="order == 'desc'">&#9661;</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="transactions">
+              <div
+                *ngFor="
+                  let t of transactionsArray
+                    | filter: filterStr
+                    | sort: fieldName:order;
+                  let i = index
+                "
+                class="transaction"
+                [ngStyle]="{ 'border-left': '6px solid ' + t.categoryCode }"
+              >
+                <span>{{ t.dates.valueDate | date: "MMM d" }}</span>
+                <div class="trans-details">
+                  <div class="merchant">
+                    <img
+                      [src]="getMerchantLogoUrl(t.merchant.name)"
+                      alt=""
+                      class="merchant-image"
+                    />
+                    <span
+                      >{{ t.merchant.name }} <br /><span class="m-type">{{
+                        t.transaction.type
+                      }}</span>
+                    </span>
+                  </div>
+                  <span>
+                    {{ t.transaction.creditDebitIndicator == "CRDT" ? "+" : "-" }}
+                    ${{ t.transaction.amountCurrency.amount }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

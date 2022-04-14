@@ -1,0 +1,53 @@
+<div class="row my-4">
+  <div class="row">
+    <h1 class="mb-3"><span class="fw-light text-secondary">Transfer Money</span><br />From your Account</h1>
+    <form [formGroup]="createFormGroup" (ngSubmit)="create()">
+      <p class="text-danger">{{message}}</p>
+      <div class="col-12 col-md-6 mx-auto">
+        <div class="col-12 text-center mb-4">
+          <input type="number" class="trasparent-input text-center" value="100.00" formControlName="amount"
+            name="amount" placeholder="Amount">
+
+          <div class="row my-4">
+            <!-- <div class="text-center"><span class="text-muted">Select an Account</span> -->
+              <button class="btn btn-link btn-sm text-muted px-1 dropdown-toggle" type="button" id="ln1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <select formControlName="anDebit" name="anDebit" class="custom-select custom-select-md"
+                  lass="dropdown-menu dropdown-menu-end shadow border-0 w-110" aria-labelledby="ln1">
+                  <option value="">Select an account</option>
+                  <option [value]="selected.accountNumber" *ngFor="let selected of Accounts">{{selected.accountNumber}}
+                    -
+                    {{selected.accountType}}</option>
+                </select>
+              </button>
+            <!-- </div> -->
+          </div>
+        </div>
+
+        <div class="form-floating mb-3 is-valid">
+          <input type="text" class="form-control" formControlName="anCredit" name="anCredit" name="accountNumber"
+            placeholder="Destination Number">
+            <label for="">Account Number</label>
+            <button type="button" class="btn btn-link text-success tooltip-btn valid-tooltip"
+            data-bs-toggle="tooltip" data-bs-placement="left" title="Account Number is valid">
+            <i class="bi bi-check-circle"></i>
+        </button>
+        </div>
+      </div>
+
+
+      <div class="row mb-4">
+        <div class="col-12 ">
+          <button type="submit" class="btn btn-primary mr-3" [disabled]="!createFormGroup.valid"
+            class="btn btn-default btn-lg shadow-sm w-100">
+            Transfer
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+

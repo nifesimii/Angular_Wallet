@@ -1,0 +1,163 @@
+<!-- select Amount -->
+<div class="row">
+    <div class="col-12 text-center mb-4">
+        <input type="text" class="trasparent-input text-center" value="110.00" placeholder="Enter Amount">
+        <div class="text-center"><span class="text-muted">Amount in USD</span>
+            <button class="btn btn-link btn-sm text-muted px-1 dropdown-toggle" type="button" id="ln1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow border-0 w-110" aria-labelledby="ln1">
+                <li><a class="dropdown-item active" >USD</a></li>
+                <li><a class="dropdown-item" >AUD</a></li>
+                <li><a class="dropdown-item" >BTC</a></li>
+                <li><a class="dropdown-item" >ETH</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Amount breakdown -->
+<div class="card mb-4">
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col">
+                <p>Transfer Amount</p>
+            </div>
+            <div class="col-auto text-end">
+                <p class="text-muted">110.00</p>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <p>Transaction Charge</p>
+            </div>
+            <div class="col-auto text-end">
+                <p class="text-muted">8.00</p>
+            </div>
+        </div>
+        <div class="row fw-medium">
+            <div class="col-12">
+                <div class="dashed-line mb-3"></div>
+            </div>
+            <div class="col">
+                <p>Total Deduction</p>
+            </div>
+            <div class="col-auto text-end">
+                <p class="text-muted">118.00</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Saving targets -->
+<div class="row mb-2">
+    <div class="col">
+        <h6 class="title">Amount withdraw to</h6>
+    </div>
+    <div class="col-auto">
+        <a routerLink="/" class="small">Add New</a>
+    </div>
+</div>
+<!-- swiper credit cards -->
+<div class="row mb-2">
+    <div class="col-12 px-0">
+        <swiper class="cardswiper"  [slidesPerView]="'auto'" [spaceBetween]="0" [pagination]="false">
+                <ng-template swiperSlide>
+                    <div class="card theme-bg shadow-sm shadow-purple mb-3">
+                        <img src="assets/img/card-bg.png" alt="" class="cardimg" />
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-auto align-self-center">
+                                    <img src="assets/img/maestro.png" alt="">
+                                </div>
+                                <div class="col align-self-center text-end">
+                                    <p class="small">
+                                        <span class="text-muted size-10">City Bank</span><br>
+                                        <span class="">Credit Card</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h6 class="fw-normal mb-3">
+                                000 0000 0001 546598
+                            </h6>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p class="mb-0 text-muted size-10">Expiry</p>
+                                    <p>09/023</p>
+                                </div>
+                                <div class="col text-end">
+                                    <p class="mb-0 text-muted size-10">Card Holder</p>
+                                    <p>Maxartkiller</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template swiperSlide>
+                    <div class="card bg-danger shadow-sm shadow-danger mb-3">
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-auto align-self-center">
+                                    <img src="assets/img/visa.png" alt="">
+                                </div>
+                                <div class="col align-self-center text-end">
+                                    <p class="small">
+                                        <span class="text-muted size-10">City Bank</span><br>
+                                        <span class="">Credit Card</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h6 class="fw-normal mb-3">
+                                000 0000 0001 546598
+                            </h6>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p class="mb-0 text-muted size-10">Expiry</p>
+                                    <p>09/023</p>
+                                </div>
+                                <div class="col text-end">
+                                    <p class="mb-0 text-muted size-10">Card Holder</p>
+                                    <p>Maxartkiller</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template swiperSlide>
+                    <div class="card theme-radial-gradient border-0 mb-3">
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-auto align-self-center">
+                                    <img src="assets/img/maestro.png" alt="">
+                                </div>
+                                <div class="col align-self-center text-end">
+                                    <p class="small">
+                                        <span class="text-muted size-10">City Bank</span><br>
+                                        <span class="">Credit Card</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <h6 class="fw-normal mb-3">
+                                000 0000 0001 546598
+                            </h6>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <p class="mb-0 text-muted size-10">Expiry</p>
+                                    <p>09/023</p>
+                                </div>
+                                <div class="col text-end">
+                                    <p class="mb-0 text-muted size-10">Card Holder</p>
+                                    <p>Maxartkiller</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+        </swiper>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col-12 ">
+        <a routerLink="/thankyou3" class="btn btn-default btn-lg shadow-sm w-100">
+            Add to Wallet
+        </a>
+    </div>
+</div>

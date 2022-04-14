@@ -1,0 +1,44 @@
+<div class="row h-100">
+  <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> You have deleted customer's account successfully
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="col-11 col-sm-11 col-md-6 col-lg-5 col-xl-3 mx-auto align-self-center py-4">
+    <form ngForm #form="ngForm" (ngSubmit)="handleDelete(form)" action="/accounts/delete" method="POST">
+      <div class="form-group form-floating mb-3 is-valid">
+        <div class="col-md-12">
+          <label for="accountNumber">
+            Account Number
+            <ng-container>
+              <span #warningmsgaccount id="warningmsgaccount" name="warningmsgaccount" class="badge badge-warning"
+                style="margin:5px;background-size: 10px;font-size: 10px"></span>
+            </ng-container>
+          </label>
+          <input type="number" (keyup)="verifyAccountExists(accountId.value,warningmsgaccount.id)" ngModel required
+            #accountId="ngModel" class="form-control" name="accountNumber" id="accountNumber"
+            placeholder="Enter Account Number">
+        </div>
+      </div>
+
+      <div class="badge badge-warning" *ngIf="accountId.touched && accountId.invalid"
+        style="margin-top: 10px;margin-bottom: 10px;">
+        <span *ngIf="accountId.errors.required">Account Number is required</span>
+      </div>
+      <br />
+      <div class="col-11 col-sm-11 mt-auto mx-auto py-4">
+        <div class="row ">
+          <div class="col-12 d-grid">
+            <!-- <button type="submit" class="submitlogin" data-target="#myModal"
+                    class="btn btn-default btn-lg shadow-sm"><b>Sign in</b></button> -->
+            <button type="submit" class="submit" [disabled]="form.invalid || failedAccountVerification()"
+              data-target="#myModal" class="btn btn-default btn-lg shadow-sm"><b>Delete Account</b> </button>
+          </div>
+        </div>
+      </div>
+      <!-- <button type="submit" class="submit" [disabled]="form.invalid || failedAccountVerification()">
+        Delete Account</button> -->
+    </form>
+  </div>
+</div>

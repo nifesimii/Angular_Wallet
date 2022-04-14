@@ -1,0 +1,61 @@
+<template>
+  <div class="page" data-name="verify">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="left">
+          <div class="logo-small">
+            <img src="img/logo.png" alt="" />
+            <h5><span class="text-secondary fw-light">Finance</span><br />Wallet</h5>
+          </div>
+        </div>
+        <div class="right">
+          <a href="/login/">Sign in</a>
+        </div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="row h-100 justify-content-center">
+        <div class="col-90 medium-50 large-40">
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-90 medium-50 large-40 align-self-center padding-vertical">
+          <h1 class="margin-bottom"><span class="text-secondary fw-light">Verify your</span><br />Email ID</h1>
+          <p class="text-secondary margin-bottom-half">We have send you an email with OTP with instruction.</p>
+          <br />
+          <form class="was-validated needs-validation" novalidate>
+            <div class="list form-list no-margin margin-bottom">
+              <ul>
+                <li class="item-content item-input item-input-with-value is-valid">
+                  <div class="item-inner">
+                    <div class="item-title item-floating-label">Username</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="OTP" class="input-with-value" value="25648" autofocus />
+                      <span class="input-clear-button"></span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-90 medium-50 large-40 text-align-center margin-top-auto padding-vertical">
+          <div class="row justify-content-center">
+            <div class="col-100 text-align-center">
+              <span class="progressstimer">
+                <img src="img/progress.png" alt="" />
+                <span class="timer" id="timer">3:00</span>
+              </span>
+              <br />
+              <p class=""><span class="text-muted">Didn't received yet?</span> <a href="">Resend OTP</a></p>
+              <a href="/thankyou2/" class="button button-fill button-large button-raised color-theme">
+                Verify Account
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</template>

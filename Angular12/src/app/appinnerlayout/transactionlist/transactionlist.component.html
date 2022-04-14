@@ -1,0 +1,65 @@
+<div class="row grid-columns">
+    <div class="col-md-7">
+        <div>
+            <div id="trans">
+                <div>
+                    <button type="submit" class="btn btn-primary mb-3 mr-3"
+                        routerLink="/transaction/topup">Top-Up</button>
+                    <button type="submit" class="btn btn-primary mb-3 mr-3"
+                        routerLink="/transaction/transfer">Transfer</button>
+                    <button type="submit" class="btn btn-primary mb-3 mr-3"
+                        routerLink="/transaction/withdraw">Withdraw</button>
+                    <div class="float-md-right">
+                        <h4 class="mr-5 mb-0">Transactions</h4>
+                    </div>
+                </div>
+                <div class="im-centered">
+                    <div class="float-md-left">
+                        <h5 class="mr-2">Choose your account : </h5>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <select (change)="loadTransactionsBy($any ($event.target).value)"
+                                class="custom-select custom-select-sm">
+                                <option value="0">Select an account</option>
+                                <option [value]="selected.accountNumber" *ngFor="let selected of Accounts">
+                                    {{selected.accountNumber}} - {{selected.accountName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col pl-0">
+                    <table class="table table-hover table-sm table-responsive-md">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Account Debit</th>
+                                <th scope="col">Account Credit</th>
+                                <th scope="col">Amount</th>
+                                <!-- <th scope="col">Opsi</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of Transactions; let i = index">
+                                <th scope="row">{{i+1}}</th>
+                                <td>{{row.date | date}}</td>
+                                <td>{{row.anDebit}}</td>
+                                <td>{{row.anCredit}}</td>
+                                <td>{{row.amount | currency: 'Rp. '}}</td>
+                                <!-- <td>
+                                                <button class="btn">
+                                                    <i class="fa fa-pencil-square-o"></i>
+                                                </button>
+                                                <button class="btn">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                            </td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

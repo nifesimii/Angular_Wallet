@@ -1,0 +1,495 @@
+@import "assets/scss/variables.scss";
+@import "assets/scss/font.scss";
+
+.appHeader {
+
+    .left,
+    .right {
+        height: 56px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+
+        .icon,
+        ion-icon {
+            font-size: 26px;
+        }
+
+        .headerButton {
+            min-width: 36px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            color: $colorPrimary;
+            position: relative;
+
+            .btn {
+                font-size: 16px;
+                height: 32px;
+                padding: 0px 14px;
+            }
+
+            &:active {
+                opacity: .6;
+            }
+        }
+    }
+
+    .left {
+        left: 10px;
+        top: 0;
+    }
+
+    .right {
+        right: 10px;
+        top: 0;
+    }
+
+    .pageTitle {
+        font-size: $fontSizeHeading;
+        font-weight: $medium;
+        padding: 0 10px;
+
+        .logo {
+            max-height: 24px;
+        }
+    }
+
+    &.text-light {
+        color: #FFF;
+
+        .headerButton {
+            color: #FFF;
+        }
+    }
+
+    &.bg-primary,
+    &.bg-secondary,
+    &.bg-success,
+    &.bg-warning,
+    &.bg-danger,
+    &.bg-info,
+    &.bg-light,
+    &.bg-dark {
+        border: 0;
+    }
+
+    &.bg-primary:before {
+        background: $colorPrimary !important;
+    }
+
+    &.bg-secondary:before {
+        background: $colorSecondary !important;
+    }
+
+    &.bg-success:before {
+        background: $colorSuccess !important;
+    }
+
+    &.bg-warning:before {
+        background: $colorWarning !important;
+    }
+
+    &.bg-danger:before {
+        background: $colorDanger !important;
+    }
+
+    &.bg-info:before {
+        background: $colorInfo !important;
+    }
+
+    &.bg-dark:before {
+        background: #222 !important;
+    }
+}
+
+
+.card {
+    background: #ffffff;
+    border-radius: $borderRadius;
+    border: 0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .card-title {
+        color: $colorHeading;
+        font-size: $fontSizeHeading;
+        font-weight: $medium;
+    }
+
+    .card-subtitle {
+        color: $colorHeading;
+        font-weight: $regular;
+        font-size: $fontSizeSub;
+    }
+
+    .listview {
+        >li:first-child {
+            .item {
+                border-radius: $borderRadius $borderRadius 0 0;
+            }
+        }
+
+        >li:last-child {
+            .item {
+                border-radius: 0 0 $borderRadius $borderRadius;
+            }
+        }
+    }
+
+    .card-header {
+        background: transparent;
+        color: $colorHeading;
+        font-weight: $medium;
+        font-size: $fontSizeHeading;
+        padding: 12px 16px;
+        border-bottom: 1px solid $colorLine;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .button {
+            font-size: 24px;
+            color: $colorLight;
+        }
+    }
+
+    .card-footer {
+        background: transparent;
+        border-top: 1px solid $colorLine;
+        color: $colorText;
+        padding: 12px 16px;
+    }
+
+    .card-img-top {
+        border-radius: $borderRadius $borderRadius 0 0;
+    }
+
+    .overlay-img {
+        border-radius: $borderRadius;
+    }
+
+    .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: $borderRadius;
+
+        .card-title {
+            color: #fff;
+        }
+
+        .card-text {
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+
+    &.bg-primary,
+    &.bg-secondary,
+    &.bg-danger,
+    &.bg-success,
+    &.bg-warning,
+    &.bg-info,
+    &.bg-dark {
+        border: 0;
+
+        .card-title {
+            color: #fff;
+        }
+
+        .card-text {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .card-header {
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+    }
+
+    &.bg-light {
+        background: #fff;
+    }
+}
+
+.modal.action-sheet {
+    z-index: 200000;
+
+    .modal-dialog {
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        min-width: 100%;
+        z-index: 12000;
+        transform: translate(0, 100%);
+    }
+
+    &.show .modal-dialog {
+        transform: translate(0, 0);
+    }
+
+    .close-button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        position: absolute;
+        right: 10px;
+        top: 3px;
+        color: $colorLight;
+
+        &:hover,
+        &:active {
+            color: $colorText;
+        }
+    }
+
+    .modal-content {
+        box-shadow: none;
+        border: 0;
+        border-radius: 0;
+        padding-bottom: $safeBottom;
+
+        .action-sheet-content {
+            padding: 20px 16px;
+            max-height: 460px;
+            overflow: auto;
+
+            .iconbox {
+                font-size: 64px;
+                margin: 10px 0 5px 0;
+                text-align: center;
+            }
+        }
+
+        .modal-header {
+            display: block;
+            padding: 2px 20px;
+
+            .modal-title {
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                display: block;
+                font-size: $fontSize;
+                padding: 10px 0;
+                color: $colorHeading;
+                font-weight: $medium;
+            }
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+    }
+}
+
+.action-button-list {
+    padding: 0;
+    margin: 0;
+
+    >li {
+        display: block;
+
+        .btn {
+            padding: 0;
+            display: flex;
+            width: 100%;
+            min-height: 50px;
+            font-size: $fontSize;
+            color: $colorHeading;
+            line-height: 1.1em;
+            justify-content: space-between;
+            font-weight: $regular;
+            border-radius: 0 !important;
+            padding: 10px 16px;
+
+            &:active,
+            &.active {
+                background: rgba($colorLine, 0.3);
+            }
+
+            &.text-primary {
+                color: $colorPrimary !important;
+            }
+
+            &.text-secondary {
+                color: $colorSecondary !important;
+            }
+
+            &.text-danger {
+                color: $colorDanger !important;
+            }
+
+            &.text-success {
+                color: $colorSuccess !important;
+            }
+
+            &.text-warning {
+                color: $colorWarning !important;
+            }
+
+            &.text-info {
+                color: $colorInfo !important;
+            }
+
+            &.text-light {
+                color: #fff !important;
+            }
+
+            &.text-dark {
+                color: $colorHeading !important;
+            }
+
+            >span {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+            .icon,
+            ion-icon {
+                width: 24px !important;
+                height: 24px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                margin-left: -5px;
+                font-size: 24px;
+                line-height: 1em;
+            }
+        }
+
+        &.action-divider {
+            height: 1px;
+            background: $colorLine;
+        }
+    }
+}
+
+.action-sheet.inset {
+    .modal-dialog {
+        padding: 16px;
+
+        .modal-content {
+            border-radius: 16px;
+            padding-bottom: 0;
+            margin-bottom: $safeBottom;
+        }
+    }
+
+    .action-button-list {
+        >li:last-child {
+            .btn {
+                border-radius: 0 0 16px 16px !important;
+            }
+        }
+    }
+}
+
+.action-sheet.action-icon {
+    .modal-content {
+        border-radius: 48px 48px 0 0;
+
+        .modal-header {
+            border-bottom: 0;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+
+            .modal-title {
+                font-size: $fontSizeHeading;
+                margin: 0;
+                padding: 0;
+            }
+
+            .modal-icon {
+                font-size: 32px;
+                width: 64px;
+                height: 64px;
+                background: $colorPrimary;
+                color: #fff;
+                display: inline-flex;
+                border-radius: 200px;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 0 10px #FFF;
+                margin: -32px 0 14px 0 !important;
+            }
+        }
+    }
+}
+
+.modalbox {
+    padding-top: $safeTop;
+    overflow: hidden;
+
+    .modal-dialog {
+        transform: translate(0, 100%) !important;
+        min-width: 100%;
+        margin: 0;
+        transition: 0.5s all !important;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: $safeTop;
+
+        .modal-content {
+            border-radius: 0;
+            border: 0;
+            margin: auto;
+            overflow: hidden;
+            padding-top: 56px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+
+            .modal-header {
+                border: 0;
+                padding: 0;
+                min-height: 56px;
+                padding: 10px 16px;
+                border-radius: 0;
+                display: flex;
+                border-bottom: 1px solid $colorLine;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                width: 100%;
+                z-index: 100;
+                background: #FFF;
+
+                .modal-title {
+                    margin: 0;
+                    color: $colorHeading;
+                    font-size: $fontSizeHeading;
+                }
+            }
+
+            .modal-body {
+                padding: 20px 16px;
+                overflow: auto;
+            }
+        }
+    }
+
+    &.show .modal-dialog {
+        transform: translate(0, 0) !important;
+    }
+}

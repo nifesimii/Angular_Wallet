@@ -1,0 +1,50 @@
+<div class="row h-100">
+    <div class="col-11 col-sm-11 mx-auto">
+        <!-- header -->
+        <div class="row">
+            <header class="header">
+                <div class="row">
+                    <div class="col">
+                        <div class="logo-small">
+                            <img src="assets/img/logo.png" alt="" />
+                            <h5><span class="text-secondary fw-light">Finance</span><br />Wallet</h5>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- header ends -->
+    </div>
+    <form [formGroup]="createFormGroup">
+        <div class="col-11 col-sm-11 col-md-6 col-lg-5 col-xl-3 mx-auto align-self-center py-4">
+
+            <h1 class="mb-4"><span class="text-secondary fw-light">Create Account</span></h1>
+
+            <div class="form-floating mb-3">
+
+                <div class="form-group col-md-4">
+                    <label for="accountName">Account Name</label>
+                    <input type="text" class="form-control" formControlName="accountName" name="accountName"
+                        placeholder="Account Name">
+                </div>
+
+            </div>
+            <div class="form-floating mb-3">
+                <div class="form-group col-md-4">
+                    <label for="balance">Balance</label>
+                    <input type="number" class="form-control" formControlName="balance" name="balance"
+                        placeholder="Balance">
+                </div>
+            </div>
+
+        </div>
+        <div class="col-11 col-sm-11 mt-auto mx-auto py-4">
+            <div class="row ">
+                <div class="col-12 d-grid">
+                    <button type="submit" class="btn btn-primary mr-3" [disabled]="!createFormGroup.valid"
+                        (click)="create()">Create</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
