@@ -10,8 +10,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 194.287 141.794" class="menubg">
                 <defs>
-                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1"
-                        gradientUnits="objectBoundingBox">
+                    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
                         <stop offset="0" stop-color="#09b2fd" />
                         <stop offset="1" stop-color="#6b00e5" />
                     </linearGradient>
@@ -40,25 +39,36 @@
         <div class="col-12">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active" (click)="menuclose()">
+                    <a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="active"
+                        (click)="menuclose()">
                         <div class="avatar avatar-40 icon"><i class="bi bi-house-door"></i></div>
                         <div class="col">Dashboard</div>
                         <div class="arrow"><i class="bi bi-chevron-right"></i></div>
                     </a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
-                        aria-expanded="false">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/chat" routerLinkActive="active" tabindex="-1"
+                        (click)="menuclose()">
                         <div class="avatar avatar-40 icon"><i class="bi bi-cart"></i></div>
-                        <div class="col">Shop</div>
+                        <div class="col">Create Fund</div>
+                        <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                    </a>
+                </li>
+
+
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                        <div class="avatar avatar-40 icon"><i class="bi bi-cart"></i></div>
+                        <div class="col">Create Fund</div>
                         <div class="arrow"><i class="bi bi-chevron-down plus"></i> <i
                                 class="bi bi-chevron-up minus"></i>
                         </div>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item nav-link" routerLink="/shop" routerLinkActive="active" (click)="menuclose()">
+                            <a class="dropdown-item nav-link" routerLink="/shop" routerLinkActive="active"
+                                (click)="menuclose()">
                                 <div class="avatar avatar-40  icon"><i class="bi bi-shop"></i></div>
                                 <div class="col align-self-center">Shop home</div>
                                 <div class="arrow"><i class="bi bi-chevron-right"></i></div>
@@ -66,7 +76,8 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item nav-link" routerLink="/products" routerLinkActive="active" (click)="menuclose()">
+                            <a class="dropdown-item nav-link" routerLink="/products" routerLinkActive="active"
+                                (click)="menuclose()">
                                 <div class="avatar avatar-40 icon"><i class="bi bi-box-seam"></i>
                                 </div>
                                 <div class="col align-self-center">All Products</div>
@@ -74,7 +85,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item nav-link" routerLink="/product" routerLinkActive="active" (click)="menuclose()">
+                            <a class="dropdown-item nav-link" routerLink="/product" routerLinkActive="active"
+                                (click)="menuclose()">
                                 <div class="avatar avatar-40 icon"><i class="bi bi-box-seam"></i>
                                 </div>
                                 <div class="col align-self-center">Product</div>
@@ -82,7 +94,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item nav-link" routerLink="/cart" routerLinkActive="active" (click)="menuclose()">
+                            <a class="dropdown-item nav-link" routerLink="/cart" routerLinkActive="active"
+                                (click)="menuclose()">
                                 <div class="avatar avatar-40 icon"><i class="bi bi-bag"></i>
                                 </div>
                                 <div class="col align-self-center">Cart</div>
@@ -90,7 +103,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item nav-link" routerLink="/myorders" routerLinkActive="active" (click)="menuclose()">
+                            <a class="dropdown-item nav-link" routerLink="/myorders" routerLinkActive="active"
+                                (click)="menuclose()">
                                 <div class="avatar avatar-40 icon"><i class="bi bi-view-list"></i>
                                 </div>
                                 <div class="col align-self-center">My Orders</div>
@@ -98,7 +112,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item nav-link" routerLink="/payment" routerLinkActive="active" (click)="menuclose()">
+                            <a class="dropdown-item nav-link" routerLink="/payment" routerLinkActive="active"
+                                (click)="menuclose()">
                                 <div class="avatar avatar-40 icon"><i class="bi bi-cash-stack"></i>
                                 </div>
                                 <div class="col align-self-center">Payment</div>
@@ -106,7 +121,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item nav-link" routerLink="/invoice" routerLinkActive="active" (click)="menuclose()">
+                            <a class="dropdown-item nav-link" routerLink="/invoice" routerLinkActive="active"
+                                (click)="menuclose()">
                                 <div class="avatar avatar-40 icon"><i class="bi bi-receipt"></i>
                                 </div>
                                 <div class="col align-self-center">Invoice</div>
@@ -114,25 +130,37 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/chat" routerLinkActive="active" tabindex="-1" (click)="menuclose()">
+                    <a class="nav-link" routerLink="/chat" routerLinkActive="active" tabindex="-1"
+                        (click)="menuclose()">
                         <div class="avatar avatar-40 icon"><i class="bi bi-chat-text"></i></div>
-                        <div class="col">Messages</div>
+                        <div class="col">Update Fund</div>
                         <div class="arrow"><i class="bi bi-chevron-right"></i></div>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/notifications" routerLinkActive="active" tabindex="-1" (click)="menuclose()">
+                    <a class="nav-link" routerLink="/notifications" routerLinkActive="active" tabindex="-1"
+                        (click)="menuclose()">
                         <div class="avatar avatar-40 icon"><i class="bi bi-bell"></i></div>
-                        <div class="col">Notification</div>
+                        <div class="col">Delete Fund</div>
                         <div class="arrow"><i class="bi bi-chevron-right"></i></div>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/blog" routerLinkActive="active" tabindex="-1" (click)="menuclose()">
+                    <a class="nav-link" routerLink="/style" routerLinkActive="active" tabindex="-1"
+                        (click)="menuclose()">
+                        <div class="avatar avatar-40 icon"><i class="bi bi-palette"></i></div>
+                        <div class="col"> Fund Details</div>
+                        <div class="arrow"><i class="bi bi-chevron-right"></i></div>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/blog" routerLinkActive="active" tabindex="-1"
+                        (click)="menuclose()">
                         <div class="avatar avatar-40 icon"><i class="bi bi-newspaper"></i></div>
                         <div class="col">Blogs</div>
                         <div class="arrow"><i class="bi bi-chevron-right"></i></div>
@@ -140,22 +168,16 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/style" routerLinkActive="active" tabindex="-1" (click)="menuclose()">
-                        <div class="avatar avatar-40 icon"><i class="bi bi-palette"></i></div>
-                        <div class="col">Style <i class="bi bi-star-fill text-warning small"></i></div>
-                        <div class="arrow"><i class="bi bi-chevron-right"></i></div>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/pages" routerLinkActive="active" tabindex="-1" (click)="menuclose()">
+                    <a class="nav-link" routerLink="/pages" routerLinkActive="active" tabindex="-1"
+                        (click)="menuclose()">
                         <div class="avatar avatar-40 icon"><i class="bi bi-file-earmark-text"></i></div>
-                        <div class="col">Pages <span class="badge bg-info fw-light">new</span></div>
+                        <div class="col">Inner Pages </div>
                         <div class="arrow"><i class="bi bi-chevron-right"></i></div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/signin" routerLinkActive="active" tabindex="-1" (click)="menuclose()">
+                    <a class="nav-link" routerLink="/signin" routerLinkActive="active" tabindex="-1"
+                        (click)="menuclose()">
                         <div class="avatar avatar-40 icon"><i class="bi bi-box-arrow-right"></i></div>
                         <div class="col">Logout</div>
                         <div class="arrow"><i class="bi bi-chevron-right"></i></div>

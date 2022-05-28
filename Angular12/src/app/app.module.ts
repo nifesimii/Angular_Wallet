@@ -86,6 +86,8 @@ import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TransactionsComponent } from './appinnerlayout/transactions/transactions.component';
 import { CardsComponent } from './appinnerlayout/cards/cards.component';
 import { SavingsComponent } from './appinnerlayout/savings/savings.component';
+import { AddEditSavingsComponent } from './appinnerlayout/savings/add-edit-savings/add-edit-savings.component';
+import { ShowSavingsComponent } from './appinnerlayout/savings/show-savings/show-savings.component';
 import { ExampleComponent } from './appinnerlayout/example/example.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateaccountComponent } from './appinnerlayout/createaccount/createaccount.component';
@@ -96,6 +98,9 @@ import { TransactiontopupComponent } from './appinnerlayout/transactiontopup/tra
 import { TransactionwithdrawComponent } from './appinnerlayout/transactionwithdraw/transactionwithdraw.component';
 import { TransactiontransferComponent } from './appinnerlayout/transactiontransfer/transactiontransfer.component';
 import { DeleteaccountComponent } from './appinnerlayout/deleteaccount/deleteaccount.component';
+import {SavingsRestapiService} from './services/savings-restapi.service';
+ 
+
 
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
@@ -168,6 +173,8 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     TransactionsComponent,
     CardsComponent,
     SavingsComponent,
+    ShowSavingsComponent,
+    AddEditSavingsComponent,
     FilterPipe,
     SortPipe,
     ExampleComponent,
@@ -178,7 +185,8 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
     TransactiontopupComponent,
     TransactionwithdrawComponent,
     TransactiontransferComponent,
-    DeleteaccountComponent
+    DeleteaccountComponent,
+
   ],
   imports: [
     BrowserModule,

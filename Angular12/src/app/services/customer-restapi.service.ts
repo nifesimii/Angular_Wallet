@@ -11,7 +11,7 @@ import { CustomerCredentials } from 'app/CustomerCredentials';
 })
 export class CustomerRestapiService {
   //Define api url
-  apiUrl = 'http://localhost:8070/api';
+  apiUrl = 'http://localhost:44358/api';
   customers: any[] = [];
   login: boolean;
 

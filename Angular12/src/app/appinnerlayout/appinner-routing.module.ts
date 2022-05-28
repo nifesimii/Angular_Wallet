@@ -29,6 +29,9 @@ import { SendmoneyComponent } from './sendmoney/sendmoney.component';
 import { PayComponent } from './pay/pay.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { SavingsComponent } from './savings/savings.component';
+import { ShowSavingsComponent } from './savings/show-savings/show-savings.component';
+import { AddEditSavingsComponent  } from './savings/add-edit-savings/add-edit-savings.component';
+
 import { Thankyou3Component } from './thankyou3/thankyou3.component';
 import { AllproductsComponent } from './allproducts/allproducts.component';
 import { ProductsComponent } from './products/products.component';
@@ -132,6 +135,14 @@ const routes: Routes = [
       {
         path: 'savings',
         component: SavingsComponent
+      },
+      {
+        path: 'show-savings',
+        component: ShowSavingsComponent
+      },
+      {
+        path: 'add-edit-savings',
+        component: AddEditSavingsComponent
       },
       {
         path: 'style',

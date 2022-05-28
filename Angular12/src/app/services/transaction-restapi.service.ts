@@ -9,7 +9,7 @@ import {TransactionType} from '../entity/transaction-type-model';
   providedIn: 'root'
 })
 export class TransactionRestapiService {
-  apiUrl = 'http://localhost:8070/api';
+  apiUrl = 'http://localhost:44355/api';
   constructor(private http: HttpClient) { }
 
   httpOptions = {

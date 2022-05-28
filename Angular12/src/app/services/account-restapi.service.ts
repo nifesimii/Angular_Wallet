@@ -9,11 +9,12 @@ import { Account } from '../entity/account-model';
 })
 export class AccountRestapiService {
 
-  private ACCOUNT_API_URL = "http://localhost:8080/api/v1/accounts";
-  private ACCOUNT_API_DELETE_URL = "http://localhost:8080/api/v1/accounts/delete";
+  private ACCOUNT_API_URL = "http://localhost:44355/api/v1/accounts";
+  private ACCOUNT_API_DELETE_URL = "http://localhost:44355/api/v1/accounts/delete";
+  private BASE_URL = "http://localhost:44355/api/v1/";
 
   //Define api url
-  apiUrl = 'http://localhost:8070/api';
+  apiUrl = 'http://localhost:44355/api';
 
   constructor(private http: HttpClient) { }
 

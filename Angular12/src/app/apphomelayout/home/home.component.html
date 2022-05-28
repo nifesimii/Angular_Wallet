@@ -16,7 +16,7 @@
                         <div class="col-auto">
                         </div>
                         <div class="col align-self-center ps-0">
-                            <p class="size-10 text-secondary mb-0">Income</p>
+                            <p class="size-10 text-secondary mb-0">Withdrawals</p>
                             <div class="value text-success">₦ 1515.89</div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                         <div class="col-auto">
                         </div>
                         <div class="col align-self-center ps-0">
-                            <p class="size-10 text-secondary mb-0">Expenses</p>
+                            <p class="size-10 text-secondary mb-0">Transfers</p>
                             <div class="value text-danger">₦ 1212k</div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                         <div class="col-auto">
                         </div>
                         <div class="col align-self-center ps-0">
-                            <p class="size-10 text-secondary mb-0">Total Bills</p>
+                            <p class="size-10 text-secondary mb-0">Deposits</p>
                             <div class="value text-primary">₦ 1902k</div>
                         </div>
                     </div>
@@ -79,12 +79,13 @@
             <div class="card-body pb-0">
                 <div class="row justify-content-between gx-0 mx-0 pb-3">
                     <div class="col-auto text-center">
-                        <a routerLink="/payment" class="avatar avatar-60 p-1 shadow-sm rounded-15 bg-opac mb-2">
+                        <a routerLink="/transactiontopup"
+                            class="avatar avatar-60 p-1 shadow-sm rounded-15 bg-opac mb-2">
                             <div class="icons bg-success text-white rounded-12 bg-opac">
-                                <i class="bi bi-receipt-cutoff size-22"></i>
+                                <i class="bi bi-wallet2 size-22"></i>
                             </div>
                         </a>
-                        <p class="size-10">Pay</p>
+                        <p class="size-10">Deposit Funds</p>
                     </div>
 
                     <div class="col-auto text-center">
@@ -93,7 +94,7 @@
                                 <i class="bi bi-arrow-up-right size-22"></i>
                             </div>
                         </a>
-                        <p class="size-10">Send</p>
+                        <p class="size-10"> Withdraw Funds</p>
                     </div>
 
                     <div class="col-auto text-center">
@@ -102,7 +103,7 @@
                                 <i class="bi bi-arrow-down-left size-22"></i>
                             </div>
                         </a>
-                        <p class="size-10">Receive</p>
+                        <p class="size-10">Transfer funds</p>
                     </div>
 
                 </div>
@@ -118,14 +119,23 @@
                     </div> -->
 
                     <div class="col-auto text-center">
-                        <a routerLink="/transactiontopup"
-                            class="avatar avatar-60 p-1 shadow-sm rounded-15 bg-opac mb-2">
+                        <a routerLink="/withdraw" class="avatar avatar-60 p-1 shadow-sm rounded-15 bg-opac mb-2">
                             <div class="icons bg-success text-white rounded-12 bg-opac">
-                                <i class="bi bi-wallet2 size-22"></i>
+                                <i class="bi bi-bank size-22"></i>
                             </div>
                         </a>
-                        <p class="size-10">Add Money</p>
+                        <p class="size-10">Create Goal</p>
                     </div>
+
+                    <div class="col-auto text-center">
+                        <a routerLink="/payment" class="avatar avatar-60 p-1 shadow-sm rounded-15 bg-opac mb-2">
+                            <div class="icons bg-success text-white rounded-12 bg-opac">
+                                <i class="bi bi-receipt-cutoff size-22"></i>
+                            </div>
+                        </a>
+                        <p class="size-10">Update Goal</p>
+                    </div>
+
 
                     <div class="col-auto text-center">
                         <a routerLink="/withdraw" class="avatar avatar-60 p-1 shadow-sm rounded-15 bg-opac mb-2">
@@ -133,7 +143,7 @@
                                 <i class="bi bi-bank size-22"></i>
                             </div>
                         </a>
-                        <p class="size-10">Withdraw</p>
+                        <p class="size-10"> Delete Goal</p>
                     </div>
 
                     <!-- <div class="col-auto text-center">
@@ -165,19 +175,19 @@
 </div>
 
 
-<!-- People -->
-<div class="row mb-2">
+<!-- Users -->
+<!-- <div class="row mb-2">
     <div class="col">
-        <h6 class="title">People</h6>
+        <h6 class="title">Users</h6>
     </div>
     <div class="col-auto">
         <a routerLink="/userlist" class="small">View More</a>
     </div>
 </div>
 <div class="row mb-3">
-    <div class="col-12 px-0">
+    <div class="col-12 px-0"> -->
         <!-- swiper users connections -->
-        <swiper class="connectionwiper" [slidesPerView]="'auto'" [spaceBetween]="0" [pagination]="false">
+        <!-- <swiper class="connectionwiper" [slidesPerView]="'auto'" [spaceBetween]="0" [pagination]="false">
             <ng-template swiperSlide>
                 <a routerLink="/profile" class="card text-center">
                     <div class="card-body p-1">
@@ -188,9 +198,9 @@
                         </figure>
                     </div>
                 </a>
-            </ng-template>
+            </ng-template> -->
 
-            <ng-template swiperSlide>
+            <!-- <ng-template swiperSlide>
                 <a routerLink="/profile" class="card text-center">
                     <div class="card-body p-1">
                         <div class="position-absolute end-0 top-0 bg-danger z-index-1 online-status">
@@ -200,9 +210,9 @@
                         </figure>
                     </div>
                 </a>
-            </ng-template>
+            </ng-template> -->
 
-            <ng-template swiperSlide>
+            <!-- <ng-template swiperSlide>
                 <a routerLink="/profile" class="card text-center">
                     <div class="card-body p-1">
                         <div class="position-absolute end-0 top-0 bg-warning z-index-1 online-status">
@@ -212,9 +222,9 @@
                         </figure>
                     </div>
                 </a>
-            </ng-template>
+            </ng-template> -->
 
-            <ng-template swiperSlide>
+            <!-- <ng-template swiperSlide>
                 <a routerLink="/profile" class="card text-center">
                     <div class="card-body p-1">
                         <div class="position-absolute end-0 top-0 bg-success z-index-1 online-status">
@@ -224,9 +234,9 @@
                         </figure>
                     </div>
                 </a>
-            </ng-template>
+            </ng-template> -->
 
-            <ng-template swiperSlide>
+            <!-- <ng-template swiperSlide>
                 <a routerLink="/profile" class="card text-center">
                     <div class="card-body p-1">
                         <div class="position-absolute end-0 top-0 bg-success z-index-1 online-status">
@@ -236,9 +246,9 @@
                         </figure>
                     </div>
                 </a>
-            </ng-template>
+            </ng-template> -->
 
-            <ng-template swiperSlide>
+            <!-- <ng-template swiperSlide>
                 <a routerLink="/profile" class="card text-center">
                     <div class="card-body p-1">
                         <figure class="avatar avatar-80 shadow-sm rounded-20">
@@ -246,9 +256,9 @@
                         </figure>
                     </div>
                 </a>
-            </ng-template>
+            </ng-template> -->
 
-            <ng-template swiperSlide>
+            <!-- <ng-template swiperSlide>
                 <a routerLink="/profile" class="card text-center">
                     <div class="card-body p-1">
                         <div class="position-absolute end-0 top-0 bg-success z-index-1 online-status">
@@ -258,9 +268,9 @@
                         </figure>
                     </div>
                 </a>
-            </ng-template>
+            </ng-template> -->
 
-            <ng-template swiperSlide>
+            <!-- <ng-template swiperSlide>
                 <a routerLink="/profile" class="card text-center">
                     <div class="card-body p-1">
                         <figure class="avatar avatar-80 shadow-sm rounded-20">
@@ -268,10 +278,10 @@
                         </figure>
                     </div>
                 </a>
-            </ng-template>
-        </swiper>
-    </div>
-</div>
+            </ng-template> -->
+        <!-- </swiper> -->
+    <!-- </div>
+</div> -->
 
 
 
@@ -364,10 +374,100 @@
     </div>
 </div>
 
+<!-- Goals -->
+<div class="row mb-3">
+    <div class="col">
+        <h6 class="title">Goals<br><small class="fw-normal text-muted">Today, 24 Aug 2021</small>
+        </h6>
+    </div>
+    <div class="col-auto align-self-center">
+        <a routerLink="/#" class="small">View all</a>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body p-0">
+                <ul class="list-group list-group-flush bg-none">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="avatar avatar-60 shadow-sm card rounded-15 p-1">
+                                    <img src="assets/img/company4.jpg" alt="" class="rounded-15">
+                                </div>
+                            </div>
+                            <div class="col align-self-center ps-0">
+                                <p class="text-secondary size-10 mb-0">Food</p>
+                                <p>Zomato</p>
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <p class="text-secondary text-muted size-10 mb-0">15-10-2021 | 10:20am</p>
+                                <p>-25.00</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="avatar avatar-60 shadow-sm card rounded-15 p-1">
+                                    <img src="assets/img/company5.png" alt="" class="rounded-15">
+                                </div>
+                            </div>
+                            <div class="col align-self-center ps-0">
+                                <p class="text-secondary size-10 mb-0">Travel</p>
+                                <p>Uber</p>
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <p class="text-secondary text-muted size-10 mb-0">15-10-2021 | 10:20am</p>
+                                <p>-26.00</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="avatar avatar-60 shadow-sm card rounded-15 p-1">
+                                    <img src="assets/img/company2.png" alt="" class="rounded-15">
+                                </div>
+                            </div>
+                            <div class="col align-self-center ps-0">
+                                <p class="text-secondary size-10 mb-0">Food</p>
+                                <p>Starbucks</p>
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <p class="text-secondary text-muted size-10 mb-0">15-10-2021 | 10:20am</p>
+                                <p>-18.00</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-auto">
+                                <div class="avatar avatar-60 shadow-sm card rounded-15 p-1">
+                                    <img src="assets/img/company3.jpg" alt="" class="rounded-15">
+                                </div>
+                            </div>
+                            <div class="col align-self-center ps-0">
+                                <p class="text-secondary size-10 mb-0">Clothing</p>
+                                <p>Walmart</p>
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <p class="text-secondary text-muted size-10 mb-0">15-10-2021 | 10:20am</p>
+                                <p>-105.00</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Blogs -->
 <div class="row mb-3">
     <div class="col">
-        <h6 class="title">News and Upcomming</h6>
+        <h6 class="title">News and Upcoming</h6>
     </div>
     <div class="col-auto align-self-center">
         <a routerLink="/blog" class="small">Read more</a>

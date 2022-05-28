@@ -8,7 +8,7 @@ import { Wallet } from '../entity/wallet-model';
   providedIn: 'root'
 })
 export class WalletRestapiService {
-  apiUrl = 'http://localhost:8070/api';
+  apiUrl = 'http://localhost:44358/api';
   constructor(private http: HttpClient) { }
 
   httpOptions = {
@@ -37,7 +37,7 @@ export class WalletRestapiService {
     return this.http.delete<Wallet>(this.apiUrl + '/wallet/' + walletId)
       .pipe(
         retry(1),
-        catchError(this.handleError)
+        catchError(this.handleError) 
       )
   }
 
